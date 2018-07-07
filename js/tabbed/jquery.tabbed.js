@@ -1,11 +1,11 @@
 /*
  * Tabbed jQuery Plugin
- * http://nathansearles.com/tabbed/
+ * https://nathansearles.com/tabbed/
  *
  * Copyright (c) 2010 Nathan Searles
  * Dual licensed under the MIT and GPL licenses.
  * Uses the same license as jQuery, see:
- * http://docs.jquery.com/License
+ * https://docs.jquery.com/License
  *
  * @version 0.1
  */

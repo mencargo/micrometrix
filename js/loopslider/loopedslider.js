@@ -1,14 +1,14 @@
 /*
  * 	loopedSlider 0.5.6 - jQuery plugin
- *	written by Nathan Searles	
- *	http://nathansearles.com/loopedslider/
+ *	written by Nathan Searles
+ *	https://nathansearles.com/loopedslider/
  *
- *	Copyright (c) 2009 Nathan Searles (http://nathansearles.com/)
+ *	Copyright (c) 2009 Nathan Searles (https://nathansearles.com/)
  *	Dual licensed under the MIT (MIT-LICENSE.txt)
  *	and GPL (GPL-LICENSE.txt) licenses.
  *
  *	Built for jQuery library
- *	http://jquery.com
+ *	https://jquery.com
  *	Compatible with jQuery 1.3.2+
  *
  */
@@ -16,7 +16,7 @@
 /*
  *	markup example for $("#loopedSlider").loopedSlider();
  *
- *	<div id="loopedSlider">	
+ *	<div id="loopedSlider">
  *		<div class="container">
  *			<div class="slides">
  *				<div><img src="01.jpg" alt="" /></div>
@@ -26,7 +26,7 @@
  *			</div>
  *		</div>
  *		<a href="#" class="previous">previous</a>
- *		<a href="#" class="next">next</a>	
+ *		<a href="#" class="next">next</a>
  *	</div>
  *
 */
@@ -36,13 +36,13 @@ if(typeof jQuery != 'undefined') {
 		$.fn.extend({
 			loopedSlider: function(options) {
 				var settings = $.extend({}, $.fn.loopedSlider.defaults, options);
-			
+
 				return this.each(
 					function() {
 					if($.fn.jquery < '1.3.2') {return;}
 					var $t = $(this);
 					var o = $.metadata ? $.extend({}, settings, $t.metadata()) : settings;
-					
+
 					var distance = 0;
 					var times = 1;
 					var slides = $(o.slides,$t).children().size();
@@ -107,7 +107,7 @@ if(typeof jQuery != 'undefined') {
 					});
 
 					$(".previous",$t).click(function(){
-						if(active===false) {	
+						if(active===false) {
 							animate("prev",true);
 							if(o.autoStart){
 								if (o.restart) {autoStart();}
@@ -172,13 +172,13 @@ if(typeof jQuery != 'undefined') {
 
 					function autoHeight(times) {
 						if(times===slides+1){times=1;}
-						if(times===0){times=slides;}	
+						if(times===0){times=slides;}
 						var getHeight = $(o.slides,$t).children(":eq("+(times-1)+")",$t).outerHeight();
-						$(o.container,$t).animate({height: getHeight},o.autoHeight);					
-					};		
+						$(o.container,$t).animate({height: getHeight},o.autoHeight);
+					};
 
-					function animate(dir,clicked){	
-						active = true;	
+					function animate(dir,clicked){
+						active = true;
 						switch(dir){
 							case "next":
 								times = times+1;
@@ -192,15 +192,15 @@ if(typeof jQuery != 'undefined') {
 								$(o.slides,$t).animate({left: distance}, o.slidespeed,function(){
 									if (times===slides+1) {
 										times = 1;
-										$(o.slides,$t).css({left:0},function(){$(o.slides,$t).animate({left:distance})});							
+										$(o.slides,$t).css({left:0},function(){$(o.slides,$t).animate({left:distance})});
 										$(o.slides,$t).children(":eq(0)").css({left:0});
-										$(o.slides,$t).children(":eq("+(slides-1)+")").css({ position:"absolute",left:-width});				
+										$(o.slides,$t).children(":eq("+(slides-1)+")").css({ position:"absolute",left:-width});
 									}
 									if (times===slides) $(o.slides,$t).children(":eq(0)").css({left:(slides*width)});
 									if (times===slides-1) $(o.slides,$t).children(":eq("+(slides-1)+")").css({left:(slides*width-width)});
 									active = false;
-								});					
-								break; 
+								});
+								break;
 							case "prev":
 								times = times-1;
 								distance = (-(times*width-width));
@@ -236,10 +236,10 @@ if(typeof jQuery != 'undefined') {
 									$(o.slides,$t).children().fadeIn(o.fadespeed);
 									active = false;
 								});
-								break; 
+								break;
 							default:
 								break;
-							}					
+							}
 						};
 					}
 				);

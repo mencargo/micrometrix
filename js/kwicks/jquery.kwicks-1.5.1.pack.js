@@ -1,10 +1,10 @@
 /*
 	Kwicks for jQuery (version 1.5.1)
 	Copyright (c) 2008 Jeremy Martin
-	http://www.jeremymartin.name/projects.php?project=kwicks
-	
+	https://www.jeremymartin.name/projects.php?project=kwicks
+
 	Licensed under the MIT license:
-		http://www.opensource.org/licenses/mit-license.php
+		https://www.opensource.org/licenses/mit-license.php
 
 	Any and all use of this script must be accompanied by this copyright/license notice in its present form.
 */
